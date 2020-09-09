@@ -1,0 +1,16 @@
+# Volumes appear in ./docker_volumes
+# Docker takes care of creating the volumes, but an ipfs-go issue forces some mkdir stuff. See README.md
+
+version: '3.3'
+
+services:
+
+    ipfs:
+        image: ipfs/go-ipfs:v0.4.19
+        volumes:
+            - ./docker_volumes/dev_ipfs_data:/data/ipfs
+        ports:
+            - "4001" # Swarm TCP
+            - "8081" # Swarm Websockets
+            - "127.0.0.1:5001:5001" # Daemon API, bound to localhost so not exposed publicly
+            - "127.0.0.1:9900:8080" # Web Gateway, bound to localhost so not exposed publicly

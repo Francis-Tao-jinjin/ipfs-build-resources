@@ -1,0 +1,7 @@
+{
+    "func": "swapExtensions",
+    "args": [{
+        "dir": "imgs"
+    }],
+    "ret": "json"
+}

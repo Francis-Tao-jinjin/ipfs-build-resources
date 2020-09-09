@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+      "downlevelIteration": true,
+      "allowJs": true,
+      "declaration": false,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "lib": ["dom", "es6", "es2015", "es5", "es2017"],
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "noImplicitReturns": true,
+      "noImplicitAny": false,
+      "outDir": "build",
+      "plugins": [
+        {
+          "name": "tslint-language-service"
+        }
+      ],
+      "strict": true,
+      "target": "ES2017",
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "jsx": "react",
+      "preserveConstEnums": false
+    },
+    "paths": {
+        "*": [
+          "src/*",
+          "types/*"
+        ]
+    },
+    "exclude": [
+      "assets",
+      "resources",
+      "build",
+      "node_modules"
+    ]
+  }
+  
